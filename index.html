@@ -10,11 +10,62 @@
 
 <body>
   <!-- <h1 id="myHeading">Hello World!</h1> -->
-  <button id="myBtn">Click Me</button>
+  <!-- <button id="myBtn">Click Me</button> -->
+  <!-- <h1 id="count">0</h1>
+  <button id="increment">+</button>
+  <button id="decrement">-</button>
+  <button id="reset">RESET</button> -->
+
+  <form>
+    <p>
+      <label for="username">username</label>
+      <input type="text" name="username" id="username">
+    </p>
+    <p>
+      <label for="password">password</label>
+      <input type="password" name="password" id="password">
+    </p>
+    <button id="signIn">Sign In</button>
+  </form>
+  <div id="users"></div>
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <script>
+
+    $('#signIn').click(event => {
+      event.preventDefault()
+
+      const userElem = $(`
+        <div>
+          <h4>${$('#username').val()}</h4>
+          <h5>${$('#password').val()}</h5>
+          <hr>
+        </div>
+      `)
+
+      $('#users').append(userElem)
+
+      $('#username').val('')
+      $('#password').val('')
+    })
+
+    // let count = 0
+
+    // $('#increment').click(() => {
+    //   count++
+    //   $('#count').text(count)
+    // })
+
+    // $('#decrement').click(() => {
+    //   count--
+    //   $('#count').text(count)
+    // })
+
+    // $('#reset').click(() => {
+    //   count = 0
+    //   $('#count').text(count)
+    // })
 
     // console.log(document.getElementById('myHeading').textContent)
     // console.log($('#myHeading').text())
