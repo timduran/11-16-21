@@ -9,13 +9,30 @@
 <body>
   
   <button id="myBtn">Click Me</button>
+  <div>
+    <h1 id= "startnumb">0</h1>
+    
+  </div>
+
 
   <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
     crossorigin="anonymous"></script>
 
   <script>
+    let numb = 0 
+    
+
+    $('#myBtn').click(() => {
+       numb ++ 
+       console.log(numb)
 
 
+     })
+    $('startnumb').click(() => {
+      
+    }
+
+  
 
   </script>
 </body>
